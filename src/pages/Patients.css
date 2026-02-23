@@ -1,0 +1,94 @@
+/* Patients-specific styles only */
+.image-doctors-page {
+    background-color: #FDFDFD;
+    min-height: 100vh;
+}
+
+.image-doctors-controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 15px;
+}
+
+.image-add-doctor-action-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.image-add-doctor-action-btn:hover {
+    background-color: var(--primary-dark-blue);
+}
+
+.image-list-title-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.image-total-count-pill {
+    background-color: var(--primary-light-blue);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.appt-edit-btn {
+    background-color: #34495E;
+    color: white;
+}
+
+.appt-edit-btn:hover {
+    background-color: #2C3E50;
+}
+
+/* Active toggle */
+.active-toggle {
+    width: 40px;
+    height: 22px;
+    border-radius: 11px;
+    background: #D1D5DB;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.active-toggle.is-active {
+    background: #10B981;
+}
+
+.toggle-circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.active-toggle.is-active .toggle-circle {
+    transform: translateX(18px);
+}
+
+@media (max-width: 768px) {
+    .image-doctors-controls-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

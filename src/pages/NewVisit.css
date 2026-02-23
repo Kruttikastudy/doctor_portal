@@ -1,0 +1,338 @@
+.nv-container {
+    padding: 30px;
+    background-color: #F8FAFC;
+    min-height: 100vh;
+}
+
+.nv-header h1 {
+    font-size: 24px;
+    color: #1B7A9F;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.nv-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nv-field-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nv-field-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.nv-field-group label span {
+    color: #E74C3C;
+}
+
+.nv-field-group input,
+.nv-field-group select,
+.nv-field-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.nv-field-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.nv-field-group input:focus,
+.nv-field-group select:focus,
+.nv-field-group textarea:focus {
+    border-color: #1B7A9F;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(27, 122, 159, 0.1);
+}
+
+.nv-section-header {
+    margin: 30px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nv-section-line {
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: #E2E8F0;
+    z-index: 1;
+}
+
+.nv-section-title {
+    background-color: #F0F7FA;
+    border: 1.5px solid #1B7A9F;
+    border-radius: 25px;
+    padding: 6px 40px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1B7A9F;
+    position: relative;
+    z-index: 2;
+}
+
+.nv-vitals-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nv-vital-field {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nv-vital-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.nv-vital-input-wrap {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+}
+
+.nv-vital-input-wrap input {
+    border: none;
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+}
+
+.nv-vital-input-wrap span {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #888;
+    background: #F8FAFC;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-left: 1.5px solid #E2E8F0;
+}
+
+.nv-med-history-card h3 {
+    font-size: 18px;
+    color: #1B7A9F;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.nv-med-table-wrap {
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nv-med-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nv-med-table th {
+    background-color: #1B7A9F;
+    color: white;
+    padding: 12px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.nv-med-table td {
+    padding: 10px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.nv-med-table input,
+.nv-med-table select {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.nv-dose-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nv-dose-input input {
+    width: 50px;
+}
+
+.nv-dose-input span {
+    font-size: 12px;
+    color: #888;
+}
+
+.nv-status-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nv-status-btn.inactive {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.nv-add-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1B7A9F;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nv-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nv-steps-indicator {
+    display: flex;
+    gap: 12px;
+}
+
+.nv-step-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #CBD5E1;
+    transition: all 0.3s;
+}
+
+.nv-step-dot.active {
+    background-color: #1B7A9F;
+    transform: scale(1.2);
+}
+
+.btn-prev {
+    background: white;
+    border: 1.5px solid #1B7A9F;
+    color: #1B7A9F;
+    padding: 8px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-next,
+.btn-save {
+    background-color: #1B7A9F;
+    color: white;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.nv-footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.btn-save {
+    background-color: #34495E;
+}
+
+/* Responsiveness for NewVisit */
+@media (max-width: 768px) {
+    .nv-container {
+        padding: 15px;
+    }
+
+    .nv-header h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nv-content {
+        padding: 20px;
+    }
+
+    .nv-vitals-grid {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+    }
+
+    .nv-vital-field {
+        min-width: 0;
+    }
+
+    .nv-section-title {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+
+    .nv-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nv-steps-indicator {
+        order: -1;
+    }
+
+    .nv-med-table {
+        min-width: 600px;
+    }
+
+    .nv-med-table-wrap {
+        overflow-x: auto;
+    }
+
+    .nv-footer-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-save,
+    .btn-next {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nv-vitals-grid {
+        grid-template-columns: 1fr;
+    }
+}

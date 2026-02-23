@@ -1,0 +1,146 @@
+.image-newvisit-page {
+    padding: 30px;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+}
+
+.newvisit-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #1b4b7a;
+    padding-bottom: 10px;
+}
+
+.newvisit-header-row h2 {
+    color: #1b4b7a;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.newvisit-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.newvisit-section {
+    margin-bottom: 30px;
+}
+
+.newvisit-section h3 {
+    color: #1b4b7a;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-left: 4px solid #1b4b7a;
+    padding-left: 10px;
+}
+
+.newvisit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.newvisit-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.newvisit-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.newvisit-field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.newvisit-field input,
+.newvisit-field select,
+.newvisit-field textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.newvisit-field input:focus,
+.newvisit-field select:focus,
+.newvisit-field textarea:focus {
+    outline: none;
+    border-color: #1b4b7a;
+    box-shadow: 0 0 0 3px rgba(27, 75, 122, 0.1);
+}
+
+.newvisit-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.newvisit-footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.newvisit-cancel-btn {
+    padding: 12px 25px;
+    background: #edf2f7;
+    color: #4a5568;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newvisit-cancel-btn:hover {
+    background: #e2e8f0;
+}
+
+.newvisit-save-btn {
+    padding: 12px 30px;
+    background: #1b4b7a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newvisit-save-btn:hover {
+    background: #153a5e;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .newvisit-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newvisit-form-container {
+        padding: 20px;
+    }
+}

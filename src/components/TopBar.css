@@ -1,0 +1,62 @@
+.topbar-strip {
+    height: 50px;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 28px;
+    gap: 10px;
+}
+
+.topbar-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.topbar-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: all 0.2s ease;
+}
+
+.topbar-icon-box:hover {
+    background-color: #f0f0f0;
+    color: var(--primary-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-profile-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.topbar-profile-circle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.topbar-profile-circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+    .topbar-strip {
+        display: none !important;
+    }
+}

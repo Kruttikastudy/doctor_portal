@@ -1,0 +1,34 @@
+.settings-page {
+    padding: 30px;
+}
+
+.settings-header {
+    margin-bottom: 24px;
+}
+
+.settings-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.settings-header p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.settings-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    color: var(--text-light);
+}
+
+.settings-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}

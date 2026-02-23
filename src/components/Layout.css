@@ -1,0 +1,22 @@
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 260px;
+    /* Match sidebar width */
+    background: var(--background-light-gray);
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+    min-width: 0;
+}
+
+@media (max-width: 991px) {
+    .main-content {
+        margin-left: 0;
+        padding-top: 65px;
+        /* Height of mobile header */
+    }
+}

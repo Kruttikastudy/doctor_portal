@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: #1B7A9F;
+  --primary-dark-blue: #01579B;
+  --primary-light-blue: #0288D1;
+  --accent-blue: #3BADD6;
+  --secondary-yellow: #FFD700;
+  --background-white: #FFFFFF;
+  --background-light-gray: #F5F7FA;
+  --text-dark: #2C3E50;
+  --text-light: #7F8C8D;
+  --border-color: #D1D8DD;
+  --border-blue: #7FBADD;
+  --success-green: #27AE60;
+  --warning-yellow: #F39C12;
+  --error-red: #E74C3C;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background-light-gray);
+  color: var(--text-dark);
+  line-height: 1.5;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+/* === Shared Admin-Portal Table Styles === */
+/* Used by Appointments and Patients pages */
+.image-doctors-list-section {
+  padding: 0 20px 40px 20px;
+}
+
+.image-list-title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-list-title-header h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #333;
+}
+
+.image-total-count-pill {
+  background-color: var(--primary-light-blue);
+  color: white;
+  padding: 8px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.image-doctors-table-container {
+  background-color: white;
+  border: 1px solid var(--border-blue);
+  overflow-x: auto;
+}
+
+.image-doctors-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.image-doctors-list-table thead tr {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.image-doctors-list-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  border-right: 1px solid var(--border-blue);
+  color: white;
+  background-color: var(--primary-blue);
+}
+
+.image-doctors-list-table th:last-child {
+  border-right: none;
+}
+
+.image-doctors-list-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-blue);
+  border-right: 1px solid var(--border-blue);
+  font-size: 14px;
+  height: 50px;
+  color: var(--text-dark);
+  background: white;
+}
+
+.image-doctors-list-table tbody tr:hover td {
+  background-color: #F0F8FF;
+}
+
+.image-doctors-list-table td:last-child {
+  border-right: none;
+}
+
+/* Avatar cell */
+.name-avatar-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image-table-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 1px solid var(--border-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image-table-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-light-blue);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Checkbox */
+.white-circle-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-circle-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--primary-blue);
+}
+
+/* Status badges - matching admin_portal */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.scheduled {
+  background: #E3F2FD;
+  color: #1565C0;
+  border: 1px solid #BBDEFB;
+}
+
+.status-badge.confirmed {
+  background: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+
+.status-badge.completed {
+  background: #F3E5F5;
+  color: #7B1FA2;
+  border: 1px solid #E1BEE7;
+}
+
+.status-badge.cancelled {
+  background: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #FFCDD2;
+}
+
+/* Search pill */
+.image-search-container {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--primary-dark-blue);
+  border-radius: 30px;
+  background-color: white;
+  width: 60%;
+  max-width: 700px;
+  overflow: hidden;
+  height: 40px;
+}
+
+.specialization-select-box {
+  background-color: var(--primary-light-blue);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 30px 0 0 30px;
+}
+
+.specialization-select-box select {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 20px;
+  height: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 28px;
+  font-family: 'Inter', sans-serif;
+}
+
+.specialization-select-box select option {
+  background: white;
+  color: #333;
+}
+
+.image-search-input {
+  flex: 1;
+  border: none;
+  padding: 0 15px;
+  height: 100%;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.image-search-input::placeholder {
+  color: #bbb;
+}
+
+.image-search-btn {
+  background: none;
+  border: none;
+  padding: 0 20px;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Btn */
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-primary {
+  background-color: var(--primary-light-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark-blue);
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background-color: var(--success-green);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #219a52;
+  transform: translateY(-1px);
+}
+
+/* Page animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease-out;
+}
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-pending {
+  background: #FFF3CD;
+  color: #856404;
+}
+
+.badge-completed {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.badge-cancelled {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.badge-active {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.badge-inactive {
+  background: #F3F4F6;
+  color: #6B7280;
+}
+
+/* Input */
+input,
+select {
+  padding: 8px 14px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(27, 122, 159, 0.1);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .image-search-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-doctors-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px 20px;
+  }
+
+  .image-search-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .image-list-title-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .image-doctors-list-section {
+    padding: 0 10px 40px 10px;
+  }
+
+  .image-doctors-table-container {
+    margin: 0 -10px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .image-doctors-list-table {
+    min-width: 800px;
+    /* Force overflow scroll for table */
+  }
+
+  .image-total-count-pill {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialization-select-box select {
+    padding: 0 10px;
+    padding-right: 22px;
+    font-size: 13px;
+  }
+
+  .image-search-btn {
+    padding: 0 12px;
+  }
+}

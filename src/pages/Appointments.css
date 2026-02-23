@@ -1,0 +1,110 @@
+/* Appointments-specific styles only */
+.image-appointments-page {
+    background-color: #FDFDFD;
+    min-height: 100vh;
+}
+
+.image-appointments-controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.filter-item-date-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-item-date-row label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.image-date-filter-input {
+    height: 40px;
+    border: 1.5px solid var(--primary-dark-blue);
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Stat cards */
+.appt-stats-row {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+.appt-stat-card {
+    flex: 1;
+    background: linear-gradient(135deg, #0288D1, #01579B);
+    border-radius: 10px;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 14px rgba(2, 136, 209, 0.25);
+}
+
+.stat-num {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Action buttons */
+.image-row-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.appt-action-btn {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.appt-start-btn {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.appt-start-btn:hover {
+    background-color: var(--primary-dark-blue);
+}
+
+.appt-complete-btn {
+    background-color: #27AE60;
+    color: white;
+}
+
+.appt-complete-btn:hover {
+    background-color: #219a52;
+}
+
+@media (max-width: 768px) {
+    .image-appointments-controls-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .appt-stats-row {
+        flex-direction: column;
+    }
+}
