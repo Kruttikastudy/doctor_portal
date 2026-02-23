@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AddAppointment.css';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
@@ -14,8 +15,8 @@ function AddAppointment() {
         contactInfo: '',
         date: '',
         time: '',
-        appointmentType: 'Routine Check-up',
-        reason: 'Regular',
+        appointmentType: '',
+        reason: '',
         urgencyDropdown: 'No',
         doctor: '',
         comments: '',
@@ -25,7 +26,7 @@ function AddAppointment() {
     useEffect(() => {
         fetch(`${API_URL}/patients`)
             .then(res => res.json())
-            .then(data => setPatients(data))
+            .then(data => setPatients(Array.isArray(data) ? data : []))
             .catch(err => console.error('Error fetching patients:', err));
     }, []);
 
@@ -38,9 +39,9 @@ function AddAppointment() {
                 setFormData(prev => ({
                     ...prev,
                     patient_id: value,
-                    firstName: patient.name.first,
-                    lastName: patient.name.last,
-                    contactInfo: patient.contact_info.mobile.number
+                    firstName: patient.name?.first || '',
+                    lastName: patient.name?.last || '',
+                    contactInfo: patient.contact_info?.mobile?.number || ''
                 }));
             }
         } else {
@@ -51,10 +52,29 @@ function AddAppointment() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        // Map local state to the schema structure expected by the backend
+        const payload = {
+            patient_name: {
+                first: formData.firstName,
+                middle: formData.middleName || null,
+                last: formData.lastName
+            },
+            patient_id: formData.patient_id || null,
+            age: Number(formData.age),
+            contact_information: formData.contactInfo,
+            appointment_date: formData.date,
+            appointment_time: formData.time,
+            appointment_type: formData.appointmentType,
+            reason_for_appointment: formData.reason,
+            urgency: formData.urgencyDropdown,
+            doctor: formData.doctor,
+            comments: formData.comments || null
+        };
+
         fetch(`${API_URL}/appointments`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(payload)
         })
             .then(res => res.json())
             .then(data => {
@@ -133,6 +153,7 @@ function AddAppointment() {
                         <div className="newvisit-field">
                             <label>Type</label>
                             <select name="appointmentType" value={formData.appointmentType} onChange={handleChange}>
+                                <option value="">Select Type</option>
                                 <option>Routine Check-up</option>
                                 <option>Follow-up</option>
                                 <option>Consultation</option>

@@ -92,3 +92,229 @@
         align-items: flex-start;
     }
 }
+
+/* Patient Detail Modal Styles */
+.patient-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.patient-detail-box {
+    background: white;
+    width: 90%;
+    max-width: 850px;
+    max-height: 90vh;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.patient-modal-header {
+    background: #1B7A9F;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patient-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.patient-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.patient-modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    background: #F8FAFC;
+    flex: 1;
+}
+
+.patient-detail-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #E2E8F0;
+}
+
+.patient-detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 16px;
+    color: #1B7A9F;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #F1F5F9;
+    font-weight: 600;
+}
+
+.patient-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px 30px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-item label {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.detail-item span {
+    font-size: 15px;
+    color: #1E293B;
+    font-weight: 600;
+}
+
+/* Allergy Tags */
+.allergy-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.allergy-detail-tag {
+    background: #FEF2F2;
+    border: 1px solid #FEE2E2;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.allergy-name {
+    color: #991B1B;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.allergy-sev {
+    color: #B91C1C;
+    font-size: 11px;
+}
+
+/* Modal Footer */
+.patient-modal-footer {
+    padding: 20px 30px;
+    background: white;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-modal-back {
+    background: #F1F5F9;
+    color: #475569;
+    border: 1.5px solid #CBD5E1;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-modal-back:hover {
+    background: #E2E8F0;
+}
+
+.btn-modal-start {
+    background: #1B7A9F;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-modal-start:hover {
+    background: #166487;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.patient-detail-section.primary-bg {
+    background: #1B7A9F;
+    color: white;
+}
+
+.section-title.white {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.sub-section-title {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 700;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.emergency-contact-card,
+.family-member-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.emergency-contact-card:last-child,
+.family-member-card:last-child {
+    margin-bottom: 0;
+}
+
+.allergy-meta {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 5px;
+}
+
+.allergy-meta span {
+    font-size: 11px;
+    color: #64748B;
+    font-weight: 500;
+}
+
+.sv-empty {
+    color: #94A3B8;
+    font-style: italic;
+    font-size: 14px;
+}

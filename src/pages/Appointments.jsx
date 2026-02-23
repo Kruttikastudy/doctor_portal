@@ -20,15 +20,16 @@ function Appointments() {
         fetch(`${API_URL}/appointments`)
             .then(res => res.json())
             .then(data => {
-                const formatted = data.map(a => ({
+                const results = Array.isArray(data) ? data : [];
+                const formatted = results.map(a => ({
                     id: a._id,
-                    patientId: a.patient_id,
-                    patientName: `${a.patient_name.first} ${a.patient_name.last}`,
-                    date: a.appointment_date,
-                    time: a.appointment_time,
-                    reason: a.reason_for_appointment,
-                    status: a.status,
-                    specialty: a.appointment_type // or match to specialty if needed
+                    patientId: a.patient_id || 'N/A',
+                    patientName: `${a.patient_name?.first || ''} ${a.patient_name?.last || ''}`.trim() || 'Unknown',
+                    date: a.appointment_date || 'N/A',
+                    time: a.appointment_time || 'N/A',
+                    reason: a.reason_for_appointment || 'N/A',
+                    status: a.status || 'Pending',
+                    specialty: a.appointment_type || 'General'
                 }));
                 setApptData(formatted);
                 setLoading(false);
@@ -40,11 +41,21 @@ function Appointments() {
     }, []);
 
     const filtered = apptData.filter((a) => {
+        // Handle MM-DD-YYYY date parsing
+        const [m, d, y] = a.date.split('-').map(Number);
+        const apptDate = new Date(y, m - 1, d);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const isPending = a.status === 'Pending';
+        const isFutureOrToday = apptDate >= today;
+
         const matchSpec = selectedSpecialty === 'All Fields' || a.specialty === selectedSpecialty;
         const matchSearch = a.patientName.toLowerCase().includes(searchQuery.toLowerCase()) ||
             a.reason.toLowerCase().includes(searchQuery.toLowerCase());
         const matchDate = !selectedDate || a.date === selectedDate;
-        return matchSpec && matchSearch && matchDate;
+
+        return isPending && isFutureOrToday && matchSpec && matchSearch && matchDate;
     });
 
     const totalAppts = apptData.length;
@@ -110,7 +121,7 @@ function Appointments() {
                     </button>
                 </div>
 
-                <button className="image-add-doctor-action-btn" onClick={() => navigate('/add-appointment')}>Add Appointment</button>
+                <button className="image-add-doctor-action-btn" onClick={() => navigate('/add-patient')}>Add Appointment</button>
 
                 {/* Date filter */}
                 <div className="filter-item-date-row">
@@ -209,8 +220,14 @@ function Appointments() {
                                     <td>
                                         <div className="image-row-actions">
                                             <button
-                                                className="appt-action-btn appt-start-btn"
-                                                onClick={() => navigate(`/start-visit/${appt.patientId}/${appt.id}`)}
+                                                className={`appt-action-btn appt-start-btn ${appt.patientId === 'N/A' ? 'disabled' : ''}`}
+                                                onClick={() => {
+                                                    if (appt.patientId === 'N/A') {
+                                                        alert('This appointment is not linked to a patient record. Please edit or re-add.');
+                                                        return;
+                                                    }
+                                                    navigate(`/start-visit/${appt.patientId}/${appt.id}`);
+                                                }}
                                             >
                                                 Start Visit
                                             </button>

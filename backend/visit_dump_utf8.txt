@@ -1,0 +1,99 @@
+﻿[dotenv@17.3.1] injecting env (3) from .env -- tip: ΓÜÖ∩╕Å  suppress all logs with { quiet: true }
+Connecting to: mongodb+srv://12345:12345@cluster0.rhxvz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+Connected to emrdb
+
+Found 2 visits for patient 697cbea6b3aa281cef71d5b1:
+[
+  {
+    "_id": "697cd40f23441edeffdf31de",
+    "visit_type": "Consultation",
+    "patient_name": "Kannika K Hebbar",
+    "patient_id": "697cbea6b3aa281cef71d5b1",
+    "chief_complaints": "Chief Complaints",
+    "vitals": {
+      "height": 66,
+      "weight": 66,
+      "blood_pressure": "66",
+      "pulse": 66,
+      "respiratory_rate": 66,
+      "oxygen_saturation": 66,
+      "temperature": 66
+    },
+    "investigation_request": "Investigation Request",
+    "investigation_result": "Investigation Result",
+    "diagnosis": {
+      "icd10_quickest": "J00",
+      "full_icd10_list": "Acute nasopharyngitis [common cold]"
+    },
+    "treatment": "Treatment",
+    "seen_by": "Dr. Smith",
+    "medication_history": [
+      {
+        "problem": "Acute nasopharyngitis [common cold]",
+        "medicine": "Benadryl",
+        "dosage": 1,
+        "dose_time": "Morning",
+        "frequency": "Once daily (OD)",
+        "duration": "1 week",
+        "status": "Active",
+        "_id": "697cd40f23441edeffdf31df"
+      }
+    ],
+    "appointment_date": "02-04-2026",
+    "billing": {
+      "total_cost": 400,
+      "amount_paid": 400,
+      "balance_amount": 0
+    },
+    "notes": "Notes\n",
+    "createdAt": "2026-01-30T15:53:51.826Z",
+    "updatedAt": "2026-01-30T15:53:51.826Z",
+    "__v": 0
+  },
+  {
+    "_id": "697cd4bf23441edeffdf31ee",
+    "visit_type": "Emergency Visit",
+    "patient_name": "Kannika K Hebbar",
+    "patient_id": "697cbea6b3aa281cef71d5b1",
+    "chief_complaints": "aaaaa",
+    "vitals": {
+      "height": 33,
+      "weight": 33,
+      "blood_pressure": "33",
+      "pulse": 33,
+      "respiratory_rate": 33,
+      "oxygen_saturation": 33,
+      "temperature": 33
+    },
+    "investigation_request": "Investigation Request",
+    "investigation_result": "Investigation Result\n",
+    "diagnosis": {
+      "icd10_quickest": "A18.84",
+      "full_icd10_list": "Tuberculosis of heart"
+    },
+    "treatment": "Treatment",
+    "seen_by": "Dr. Johnson",
+    "medication_history": [
+      {
+        "problem": "heart tubercolosis",
+        "medicine": "Medicine",
+        "dosage": 3,
+        "dose_time": "Afternoon",
+        "frequency": "Once daily (OD)",
+        "duration": "3 months",
+        "status": "Active",
+        "_id": "6980edfd6e546750a764b28b"
+      }
+    ],
+    "appointment_date": "02-04-2026",
+    "billing": {
+      "total_cost": 50000,
+      "amount_paid": 40000,
+      "balance_amount": 10000
+    },
+    "notes": "Notes",
+    "createdAt": "2026-01-30T15:56:47.985Z",
+    "updatedAt": "2026-02-02T18:33:33.919Z",
+    "__v": 2
+  }
+]

@@ -27,10 +27,19 @@ router.post('/', async (req, res) => {
 // Get patient by ID
 router.get('/:id', async (req, res) => {
     try {
+        console.log(`GET /api/patients/${req.params.id} - Searching...`);
+        console.log(`DEBUG: Model Name: ${Patient.modelName}`);
+        console.log(`DEBUG: Collection Name: ${Patient.collection.name}`);
+        console.log(`DEBUG: Database Name: ${Patient.db.name}`);
+
         const patient = await Patient.findById(req.params.id);
-        if (!patient) return res.status(404).json({ message: 'Patient not found' });
+        if (!patient) {
+            console.warn(`GET /api/patients/${req.params.id} - NOT FOUND`);
+            return res.status(404).json({ message: 'Patient not found' });
+        }
         res.json(patient);
     } catch (err) {
+        console.error(`GET /api/patients/${req.params.id} - ERROR:`, err.message);
         res.status(500).json({ message: err.message });
     }
 });

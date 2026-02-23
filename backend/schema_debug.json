@@ -1,0 +1,139 @@
+{
+  "patient": {
+    "_id": "6904b237e75022f423322c5e",
+    "name": {
+      "first": "Kruttika",
+      "middle": "hh",
+      "last": "Hebbar",
+      "_id": "6904b237e75022f423322c5f"
+    },
+    "date_of_birth": "10-13-2025",
+    "gender": "Female",
+    "blood_group": "B Positive (B⁺)",
+    "address": {
+      "street": "Cement Company Road,Mulund",
+      "street2": "2003/04,Bliss,Citi of Joy",
+      "city": "Mulund Dd Road",
+      "postal_code": "400080",
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "_id": "6904b237e75022f423322c60"
+    },
+    "occupation": "Employed",
+    "aadhaar": "212252226224",
+    "pan": "ABCPQ1235L",
+    "contact_info": {
+      "mobile": {
+        "code": "+91",
+        "number": "8765487554",
+        "_id": "6904b332e75022f423322c69"
+      },
+      "home_phone": {
+        "code": "+91",
+        "number": "1234567291"
+      },
+      "work_phone": {
+        "code": "+91",
+        "number": "9087654321"
+      },
+      "email": "placeholder@example.com",
+      "preferred_contact_methods": [
+        "Email",
+        "Email",
+        "Messages"
+      ],
+      "emergency_contact": [
+        {
+          "name": {
+            "first": "Kruttika",
+            "middle": "k",
+            "last": "Hebbar",
+            "_id": "6904b332e75022f423322c6b"
+          },
+          "relationship": "Sibling",
+          "phone": {
+            "code": "+91",
+            "number": "9287654326",
+            "_id": "6904b332e75022f423322c6c"
+          },
+          "email": "sdf@gmail.com",
+          "_id": "6904b332e75022f423322c6a"
+        }
+      ],
+      "_id": "6904b237e75022f423322c61"
+    },
+    "insurance": {
+      "primary": {
+        "company_name": "some",
+        "policy_number": "555555",
+        "group_number": "3",
+        "plan_type": "Point of Service (POS)",
+        "effective_start": "10-01-2025",
+        "effective_end": "11-05-2025",
+        "_id": "6904b385e75022f423322c99"
+      },
+      "secondary": {
+        "company_name": "something",
+        "policy_number": "5346776",
+        "group_number": "5",
+        "plan_type": "Point of Service (POS)",
+        "effective_start": "10-08-2025",
+        "effective_end": "11-07-2025"
+      },
+      "insurance_contact_number": "4569796969",
+      "insurance_card_img": {
+        "file_id": "6904b237e75022f423322c5d"
+      },
+      "uploaded_files": [],
+      "_id": "6904b385e75022f423322c98"
+    },
+    "family_history": {
+      "family_members": []
+    },
+    "social_history": {
+      "social_history_free_text": {
+        "notes": ""
+      }
+    },
+    "allergies": [
+      {
+        "allergen": "Shellfish",
+        "reaction": "Hives",
+        "severity": "Mild",
+        "category": "Insects",
+        "code": "A200",
+        "status": "Inactive",
+        "_id": "6904b3a3e75022f423322cad"
+      }
+    ],
+    "createdAt": "2025-10-31T12:57:27.654Z",
+    "updatedAt": "2026-02-17T15:33:11.514Z",
+    "__v": 2,
+    "img": {
+      "file_id": "6904b356e75022f423322c86"
+    }
+  },
+  "appointment": {
+    "_id": "68f2343b8b067902212b747d",
+    "patient_name": {
+      "first": "Kruttika",
+      "middle": null,
+      "last": "Hebbar",
+      "_id": "68f2343b8b067902212b747e"
+    },
+    "patient_id": "68f2343b8b067902212b747c",
+    "age": 18,
+    "contact_information": "2345678907",
+    "appointment_date": "10-23-2025",
+    "appointment_time": "04:45 PM",
+    "appointment_type": "Follow-up",
+    "reason_for_appointment": "Regular",
+    "urgency": "No",
+    "doctor": "Dr. Ram Shah",
+    "comments": "sdf",
+    "createdAt": "2025-10-17T12:19:07.498Z",
+    "updatedAt": "2025-10-17T12:19:07.498Z",
+    "__v": 0
+  }
+}

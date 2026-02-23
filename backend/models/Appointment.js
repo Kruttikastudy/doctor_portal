@@ -31,32 +31,19 @@ const appointmentSchema = new mongoose.Schema({
         required: true
     },
     appointment_type: {
-        type: String,
-        default: 'Routine Check-up'
-    },
-    reason_for_appointment: {
-        type: String,
-        default: 'Regular'
+        type: String
     },
     urgency: {
         type: String,
-        enum: ['No', 'Yes'],
-        default: 'No'
+        enum: ['No', 'Yes']
     },
     doctor: {
         type: String
-    },
-    status: {
-        type: String,
-        enum: ['Pending', 'Completed', 'Cancelled'],
-        default: 'Pending'
     },
     comments: {
         type: String,
         default: null
     }
-}, {
-    timestamps: true
-});
+}, { timestamps: true });
 
 export default mongoose.models.Appointment || mongoose.model('Appointment', appointmentSchema);

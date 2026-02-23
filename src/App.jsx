@@ -8,6 +8,7 @@ import StartVisit from './pages/StartVisit';
 import NewVisit from './pages/NewVisit';
 import Settings from './pages/Settings';
 import AddAppointment from './pages/AddAppointment';
+import AddPatient from './pages/AddPatient';
 import './App.css';
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
         <Route element={<Layout />}>
           <Route path="appointments" element={<Appointments />} />
           <Route path="patients" element={<Patients />} />
-          <Route path="start-visit/:patientId/:appointmentId" element={<StartVisit />} />
+          <Route path="start-visit/:patientId/:appointmentId?" element={<StartVisit />} />
           <Route path="new-visit/:patientId" element={<NewVisit />} />
           <Route path="settings" element={<Settings />} />
           <Route path="add-appointment" element={<AddAppointment />} />
+          <Route path="add-patient" element={<AddPatient />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

@@ -1,0 +1,148 @@
+.add-patient-page {
+    padding: 40px;
+    background-color: #f8fafc;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-patient-header {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.add-patient-form {
+    width: 100%;
+    max-width: 1100px;
+    background: white;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ap-section {
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.ap-section-header {
+    background-color: #e3f2fd;
+    color: #1e40af;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.ap-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.ap-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.ap-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ap-group.ap-full {
+    grid-column: 1 / -1;
+}
+
+.ap-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.ap-group label span {
+    color: #ef4444;
+}
+
+.ap-group input,
+.ap-group select,
+.ap-group textarea {
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.ap-group input:focus,
+.ap-group select:focus,
+.ap-group textarea:focus {
+    outline: none;
+    border-color: #1e40af;
+}
+
+.ap-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 20px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.save-btn {
+    background: #1e40af;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: white;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+    .ap-grid-4,
+    .ap-grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .ap-grid-4,
+    .ap-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .add-patient-page {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,241 @@
+﻿[dotenv@17.3.1] injecting env (3) from .env -- tip: ≡ƒöÉ prevent building .env in docker: https://dotenvx.com/prebuild
+Connecting to: mongodb+srv://12345:12345@cluster0.rhxvz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+Connected to emrdb
+
+Patient Data for 697cbea6b3aa281cef71d5b1:
+{
+  "_id": "697cbea6b3aa281cef71d5b1",
+  "name": {
+    "first": "Kannika",
+    "middle": "K",
+    "last": "Hebbar",
+    "_id": "69976d7b5e00a04280a0f660"
+  },
+  "date_of_birth": "06-07-2005",
+  "gender": "Female",
+  "blood_group": "B Negative (BΓü╗)",
+  "address": {
+    "street": "Cement Company Road,Mulund",
+    "street2": "2003/04,Bliss,Citi of Joy",
+    "city": "Mumbai",
+    "postal_code": "400080",
+    "district": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India",
+    "_id": "69976d7b5e00a04280a0f661"
+  },
+  "occupation": "Student",
+  "aadhaar": "912257226124",
+  "img": {
+    "file_id": "697cbea6b3aa281cef71d5ae"
+  },
+  "contact_info": {
+    "mobile": {
+      "code": "+91",
+      "number": "8765487654",
+      "_id": "69976d7b5e00a04280a0f663"
+    },
+    "home_phone": {
+      "code": "+91",
+      "number": "1234567291"
+    },
+    "work_phone": {
+      "code": "+91",
+      "number": "9087654321"
+    },
+    "email": "placeholder@example.com",
+    "preferred_contact_methods": [
+      "Email",
+      "Messages",
+      "Phone Call"
+    ],
+    "emergency_contact": [
+      {
+        "name": {
+          "first": "Kruttika",
+          "middle": "k",
+          "last": "Hebbar",
+          "_id": "69976d7b5e00a04280a0f665"
+        },
+        "relationship": "Sibling",
+        "phone": {
+          "code": "+91",
+          "number": "9287654326",
+          "_id": "69976d7b5e00a04280a0f666"
+        },
+        "email": "sdf@gmail.com",
+        "_id": "69976d7b5e00a04280a0f664"
+      },
+      {
+        "name": {
+          "first": "Kavya",
+          "middle": "k",
+          "last": "Hebbar",
+          "_id": "69976d7b5e00a04280a0f668"
+        },
+        "relationship": "Mother",
+        "phone": {
+          "code": "+91",
+          "number": "9287654326",
+          "_id": "69976d7b5e00a04280a0f669"
+        },
+        "email": "sdf1@gmail.com",
+        "_id": "69976d7b5e00a04280a0f667"
+      }
+    ],
+    "_id": "69976d7b5e00a04280a0f662"
+  },
+  "insurance": {
+    "primary": {
+      "company_name": "some",
+      "policy_number": "555555",
+      "group_number": "3",
+      "plan_type": "Exclusive Provider Organization (EPO)",
+      "effective_start": "12-31-2025",
+      "effective_end": "02-20-2026",
+      "_id": "69976d7b5e00a04280a0f66b"
+    },
+    "secondary": {
+      "company_name": "something",
+      "policy_number": "5346776",
+      "group_number": "5",
+      "plan_type": "Medicaid",
+      "effective_start": "12-31-2025",
+      "effective_end": "02-05-2026"
+    },
+    "insurance_contact_number": "4569796969",
+    "insurance_card_image": "",
+    "uploaded_files": [],
+    "_id": "69976d7b5e00a04280a0f66a"
+  },
+  "family_history": {
+    "family_members": [
+      {
+        "name": {
+          "first": "Kruttika",
+          "middle": "K",
+          "last": "Hebbar"
+        },
+        "date_of_birth": "06-07-2005",
+        "gender": "Female",
+        "relationship": "Sister",
+        "deceased": true,
+        "medical_conditions": [
+          "asthma",
+          "diabetes"
+        ],
+        "genetic_conditions": [
+          {
+            "condition_name": "diabetes",
+            "affected_family_member": "Sister",
+            "genetic_testing_results": "Negative",
+            "_id": "69976d7b5e00a04280a0f66f"
+          }
+        ],
+        "_id": "69976d7b5e00a04280a0f66e"
+      }
+    ]
+  },
+  "social_history": {
+    "tobacco_smoking": {
+      "current_status": "Never Smoked",
+      "average_daily_consumption": null,
+      "duration_of_use": "",
+      "duration_unit": "years",
+      "quit_date": "",
+      "notes": "aaaaa"
+    },
+    "tobacco_consumption": {
+      "current_status": "Current user",
+      "average_daily_consumption": 3,
+      "duration_of_use": "3",
+      "duration_unit": "years",
+      "quit_date": "",
+      "notes": "aaaaaaaaaa"
+    },
+    "alcohol_use": {
+      "current_status": "Non-Drinker",
+      "average_weekly_consumption": "",
+      "type_of_alcohol": "",
+      "period_of_use": "",
+      "notes": "aaaaaaa"
+    },
+    "physical_activity": {
+      "frequency": "5+ times/week",
+      "type_of_exercise": "xcv",
+      "duration": 15,
+      "duration_unit": "min",
+      "consistency": "Regular",
+      "notes": "aaaaaaaaaaaa"
+    },
+    "stress": {
+      "perceived_stress_level": "High",
+      "major_stressors": "aaaaaaa",
+      "coping_mechanisms": "aaaaaaaa",
+      "notes": "aaaaaaaa"
+    },
+    "social_isolation_connection": {
+      "isolation_status": "Low",
+      "social_support": "Supportive family",
+      "frequency_of_social_interactions": "aaaaaaa",
+      "notes": "aaaaaaaaa"
+    },
+    "exposure_to_violence": {
+      "type_of_violence": "Emotional abuse",
+      "date_of_last_exposure": "01-15-2026",
+      "support_or_intervention_received": "aaaaaaaaaaaaaa",
+      "notes": "ddddd"
+    },
+    "gender_identity": {
+      "gender_identity": "Female",
+      "notes": "aaaaaaaaaaaa"
+    },
+    "sexual_orientation": {
+      "sexual_orientation": "Straight",
+      "notes": "AAAAAAAAAA"
+    },
+    "education": {
+      "highest_level_of_education": "Bachelor's",
+      "notes": "aaaaaaaaa"
+    },
+    "financial_resources": {
+      "income_level": "Moderate",
+      "employment_status": "Student",
+      "financial_support": "Family",
+      "notes": "aaaaaaaaa"
+    },
+    "nutrients_history": {
+      "dietary_preferences": "aaaaaaa",
+      "supplement_usage": "No",
+      "notes": "aaaaaaaaaaaa"
+    }
+  },
+  "allergies": [
+    {
+      "allergen": "Milk",
+      "reaction": "Hives",
+      "severity": "Severe",
+      "category": "Foods",
+      "code": "A200",
+      "status": "Acute",
+      "_id": "697cc591eb9df8da7666d891"
+    },
+    {
+      "allergen": "Latex",
+      "reaction": "Itching",
+      "severity": "Mild",
+      "category": "Latex",
+      "code": "A500",
+      "status": "Active",
+      "_id": "697cc591eb9df8da7666d892"
+    }
+  ],
+  "createdAt": "2026-01-30T14:22:30.470Z",
+  "updatedAt": "2026-02-19T20:07:23.369Z",
+  "__v": 6,
+  "pan": "",
+  "photo": "",
+  "marital_status": "Single",
+  "nationality": "Other",
+  "category": "General"
+}
