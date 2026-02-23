@@ -12,6 +12,8 @@ import visitRoutes from './routes/visitRoutes.js';
 import icdRoutes from './routes/icdRoutes.js';
 
 console.log('DEBUG: NODE_ENV =', process.env.NODE_ENV);
+console.log('DEBUG: PORT =', process.env.PORT);
+console.log('DEBUG: FRONTEND_URL =', process.env.FRONTEND_URL);
 console.log('DEBUG: MONGO_URI is set =', !!process.env.MONGO_URI);
 if (process.env.MONGO_URI) {
     console.log('DEBUG: MONGO_URI (redacted) =', process.env.MONGO_URI.substring(0, 20) + '...');
