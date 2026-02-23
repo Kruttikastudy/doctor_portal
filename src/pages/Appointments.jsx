@@ -58,8 +58,15 @@ function Appointments() {
         return isPending && isFutureOrToday && matchSpec && matchSearch && matchDate;
     });
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     const totalAppts = apptData.length;
-    const pendingCount = apptData.filter(a => a.status === 'Pending').length;
+    const pendingCount = apptData.filter(a => {
+        const [m, d, y] = a.date.split('-').map(Number);
+        const apptDate = new Date(y, m - 1, d);
+        return a.status === 'Pending' && apptDate >= today;
+    }).length;
     const cancelledCount = apptData.filter(a => a.status === 'Cancelled').length;
 
     const handleComplete = (id) => {
@@ -142,7 +149,7 @@ function Appointments() {
                     <span className="stat-num">{totalAppts}</span>
                 </div>
                 <div className="appt-stat-card">
-                    <span>Pending</span>
+                    <span>Upcoming</span>
                     <span className="stat-num">{pendingCount}</span>
                 </div>
                 <div className="appt-stat-card">
